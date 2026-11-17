@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+
+<title>Loan Application Status</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: #ffffff;
+    padding: max(35px, env(safe-area-inset-top)) 25px
+             max(25px, env(safe-area-inset-bottom));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    margin-bottom: 65px;
+    text-shadow: 0 2px 12px rgba(38,112,201,0.12);
+}
+
+.logo span:first-child {
+    color: #0878ed;
+}
+
+.logo span:last-child {
+    color: #ff572f;
+}
+
+.success-icon {
+    font-size: 95px;
+    line-height: 1.2;
+    margin: 0 auto 30px;
+    filter: drop-shadow(0 5px 9px rgba(255,165,0,0.15));
+}
+
+h1 {
+    font-size: 29px;
+    color: #252b40;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.message {
+    color: #424d60;
+    font-size: 17px;
+    line-height: 1.8;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.demo-label {
+    display: inline-block;
+    align-self: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #805c18;
+    background: #fff3d6;
+    padding: 8px 18px;
+    border-radius: 25px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.details {
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 15px;
+    gap: 12px;
+}
+
+.detail-row .label {
+    color: #929bad;
+    text-align: left;
+}
+
+.detail-row .value {
+    color: #333b50;
+    font-weight: 700;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.detail-row:first-child .value {
+    color: #1680e8;
+}
+
+.done-btn {
+    width: 100%;
+    min-height: 58px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(110deg, #1678ed, #a52bd1);
+    color: white;
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 18px rgba(65,105,220,0.22);
+}
+
+.done-btn:active {
+    transform: scale(0.98);
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #aab0bd;
+}
+
+@media(max-width:380px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo {
+        font-size: 33px;
+        margin-bottom: 45px;
+    }
+
+    .success-icon {
+        font-size: 85px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+}
+
+@media(max-height:700px) {
+    .container {
+        justify-content: flex-start;
+        padding-top: max(20px, env(safe-area-inset-top));
+    }
+
+    .logo {
+        margin-bottom: 25px;
+    }
+
+    .success-icon {
+        font-size: 75px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        margin-bottom: 12px;
+    }
+
+    .message {
+        margin-bottom: 20px;
+    }
+
+    .demo-label {
+        margin-bottom: 20px;
+    }
+
+    .details {
+        margin-bottom: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <span>Eco</span><span>Cash</span>
+    </div>
+
+    <div class="success-icon">🎉</div>
+
+    <h1>👏Congratulations🎉</h1>
+
+    <p class="message">
+        Your loan will be disbursed to your wallet
+        within 2 to 3 business days.
+        Thank you!
+    </p>
+
+    <div class="demo-label">
+        REVIEWS
+    </div>
+
+    <div class="details">
+
+        <div class="detail-row">
+            <span class="label">Approved amount</span>
+            <span class="value">Recorded✅</span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">Repayment period</span>
+            <span class="value">Recorded✅</span>
+        </div>
+
+    </div>
+
+    <button class="done-btn" onclick="finish()">
+        DONE
+    </button>
+
+    <div class="footer">
+        Thank you for choosing EcoCash
+    </div>
+
+</div>
+
+<script>
+function finish() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
